@@ -26,7 +26,7 @@ do
 
     name=$(basename "$file")
     name2=$(basename "$file2")
-    ID="@RG\tID:ind\tSM:ind\tPL:Illumina"
+    ID="@RG\tID:$name\tSM:$name\tPL:Illumina"
 
     # Align reads 1 step
     bwa mem -t "$NCPU" \

@@ -43,7 +43,7 @@ do
     echo "Aligning file $file"
 
     name=$(basename "$file")
-    ID="@RG\tID:ind\tSM:ind\tPL:IonProton"
+    ID="@RG\tID:$name\tSM:$name\tPL:Illumina"
 
     # Align reads 1 step
     bwa mem -t "$NCPU" \
